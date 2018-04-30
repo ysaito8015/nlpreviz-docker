@@ -25,6 +25,7 @@ RUN cd /opt/emr-nlp-server/ && ant resolve && env CATALINA_HOME=/opt/tomcat8 ant
 # fetch data.zip
 #/opt/tomcat8
 RUN cd /opt/tomcat8/ && wget "https://github.com/NLPReViz/emr-nlp-server/releases/download/empirical-study/data.zip"  && unzip ./data.zip && rm ./data.zip
+RUN cd /opt/tomcat8/data/libsvm && make
 
 # install NLPReViz views
 # /opt/tomcat8/webapps
