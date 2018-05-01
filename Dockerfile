@@ -6,7 +6,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y ant build-essenti
 
 # install tomcat8 & nodejs
 #/opt
-RUN cd /opt && wget "http://ftp.jaist.ac.jp/pub/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
+#RUN cd /opt && wget "http://ftp.jaist.ac.jp/pub/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
+RUN cd /opt && wget "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
 RUN tar axvf /opt/apache-tomcat-8.5.23.tar.gz -C /opt/ && rm /opt/apache-tomcat-8.5.23.tar.gz
 RUN mv /opt/apache-tomcat-8.5.23 /opt/tomcat8
 RUN cd /opt && wget "https://nodejs.org/dist/v6.11.3/node-v6.11.3-linux-x64.tar.xz"
